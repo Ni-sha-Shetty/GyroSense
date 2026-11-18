@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1220"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Application Heading -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GyroSense"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Real-Time Gyroscope Monitoring"
+            android:textColor="#AAB6CC"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp" />
+
+        <!-- Sensor Status -->
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checking sensor..."
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:layout_marginTop="22dp"
+            android:background="#17243A" />
+
+        <!-- Live Readings Heading -->
+
+        <!-- 3D ROTATION INDICATOR -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LIVE 3D ROTATION VIEW"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Move your phone to see the virtual rotation"
+            android:textColor="#AAB6CC"
+            android:textSize="13sp"
+            android:layout_marginBottom="10dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="#17243A"
+            android:layout_marginBottom="20dp">
+
+            <com.example.gryoscope.RotationView
+                android:id="@+id/rotationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LIVE SENSOR READINGS"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- X Axis -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X - AXIS"
+            android:textColor="#FF7777"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.000 rad/s"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Y Axis -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y - AXIS"
+            android:textColor="#54D6A0"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.000 rad/s"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Z Axis -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Z - AXIS"
+            android:textColor="#66B6FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvZ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.000 rad/s"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Degrees Per Second -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ANGULAR VELOCITY (DEGREES/SECOND)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvDegrees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X: 0.00°/s\nY: 0.00°/s\nZ: 0.00°/s"
+            android:textColor="#C4D4F0"
+            android:textSize="16sp"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginTop="10dp" />
+
+        <!-- Magnitude -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ROTATION MAGNITUDE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/tvMagnitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.000 rad/s"
+            android:textColor="#64B5FF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginTop="10dp" />
+
+        <!-- Peak Reading -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PEAK ROTATION"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tvPeak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.000 rad/s"
+            android:textColor="#FFC56B"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginTop="10dp" />
+
+        <!-- Control Buttons -->
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START MONITORING"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAUSE MONITORING" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESET STATISTICS" />
+
+        <!-- Sensor Details -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SENSOR INFORMATION"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/tvSensorInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sensor details will appear here."
+            android:textColor="#C4D4F0"
+            android:textSize="14sp"
+            android:padding="15dp"
+            android:background="#17243A"
+            android:layout_marginTop="10dp" />
+
+        <!-- Footer -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GyroSense | Mobile Application Development"
+            android:textColor="#8493AB"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
